@@ -13,14 +13,14 @@ import utils.RandomGenerator;
 public class ThreeSum {
 	private static Logger log = LoggerFactory.getLogger(ThreeSum.class);
 	
-	private static void printAll (List<Integer> ar ) {
-		int len = ar.size();
+	private static void printAll (int[] ar ) {
+		int len = ar.length;
 		for(int i=0; i<len ; i++){
 			for(int j=i+1; j<len; j++) {
 				for(int k=j+1; k<len; k++) {
-					int sum = ar.get(i)+ar.get(j)+ar.get(k);
-					if(ar.get(i)+ar.get(j)+ar.get(k) == 0) {
-						log.info(ar.get(i) +"/"+ ar.get(j) + "/" + ar.get(k));
+					int sum = ar[i]+ar[j]+ar[k];
+					if(ar[i]+ar[j]+ar[k] == 0) {
+						log.info(ar[i] +"/"+ ar[j] + "/" + ar[k]);
 					}
 				} 
 			}
@@ -30,16 +30,13 @@ public class ThreeSum {
 	public static void main(String args[]) {
 		System.out.println("Hello world!!");
 		
-		List<Integer> ar= RandomGenerator.getStreamOfRandomIntsWithRange(-10,10,15).boxed().collect(Collectors.toList());
-		log.info(ar.toString());
 		StopWatch watch = new StopWatch();
-		watch.start();
+		watch.start("ThreeSum Problem");
+		int[] ar= RandomGenerator.getStreamOfRandomIntsWithRange(-100,100,150).toArray();
 		printAll(ar);
 		watch.stop();
-		log.info("Complete");
-		
+		log.info("Complete: " + watch.getLastTaskName() + ": "+ watch.getTotalTimeMillis());
 		
 	}
-
 	
 }
