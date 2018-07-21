@@ -1,0 +1,9 @@
+---
+VM version: Sep 22 2017 15:52:27 - 81_REL - optU - windows amd64 - 6 - bas2:294579 (mixed mode)
+
+Time:2018-07-2116:53:48
+Pid: 15668
+Hostname: PHLN00650637A
+current dir: C:\Users\i077837\git\ds_algos
+---
+   :    [11476] 16:53:48 ***ERROR (:0): OutOfMemoryError: Could not allocate 536870928 bytes
