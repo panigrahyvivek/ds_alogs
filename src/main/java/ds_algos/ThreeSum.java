@@ -38,7 +38,7 @@ public class ThreeSum {
 		int len = ar.length;
 		int count = 0;
 		int sum = 0;
-		Set<Integer> visitedElementCache = new HashSet<Integer>();
+		//Set<Integer> visitedElementCache = new HashSet<Integer>();
 		int searchkey, binarySearchIndex;
 		for (int i = 0; i < len; i++) {
 			for (int j = i + 1; j < len; j++) {
