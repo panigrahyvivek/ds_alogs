@@ -15,6 +15,8 @@ public class ReverseString {
 		log.info(new StringBuilder(str).reverse().toString());
 		
 		String sentence = "Master Yoda is the best!";
+		log.info(new StringBuilder(sentence).reverse().toString());
+		
 		Stack<String> myStack = new Stack<>();
 		
 		StringTokenizer st = new StringTokenizer(sentence, " ");
